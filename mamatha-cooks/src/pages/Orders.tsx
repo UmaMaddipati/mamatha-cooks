@@ -16,7 +16,7 @@ const Orders = () => {
     if (!token) return;
     const fetchOrders = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/orders", {
+        const res = await fetch("https://mamatha-cooks-api.onrender.com/api/orders", {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {
@@ -43,7 +43,7 @@ const Orders = () => {
 
     setTrackingLoading(prev => ({ ...prev, [orderId]: true }));
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/track/${awb}`, {
+      const res = await fetch(`https://mamatha-cooks-api.onrender.com/api/orders/track/${awb}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {

@@ -35,7 +35,7 @@ export const CheckoutModal = ({ items, totalPrice, whatsappMsg }: { items: any[]
     
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/user/addresses", {
+      const res = await fetch("https://mamatha-cooks-api.onrender.com/api/user/addresses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,7 +78,7 @@ export const CheckoutModal = ({ items, totalPrice, whatsappMsg }: { items: any[]
     try {
       setLoading(true);
       // Generate Order in Backend
-      const res = await fetch("http://localhost:5000/api/orders", {
+      const res = await fetch("https://mamatha-cooks-api.onrender.com/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
